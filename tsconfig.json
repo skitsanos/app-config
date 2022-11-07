@@ -10,7 +10,7 @@
         "declaration": true,
         "esModuleInterop": true,
         "lib": ["ESNext"],
-        "module": "NodeNext",
+        "module": "CommonJS",
         "moduleResolution": "Node",
         "sourceMap": true,
         "strict": true,
