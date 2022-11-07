@@ -1,6 +1,6 @@
 {
     "name": "@skitsanos/app-config",
-    "version": "1.0.8",
+    "version": "1.0.9",
     "author": {
         "name": "skitsanos",
         "url": "https://github.com/skitsanos"
@@ -21,6 +21,11 @@
         "build": "tsc",
         "publish": "npm publish --access=public"
     },
+    "keywords": [
+        "config",
+        "configuration",
+        "application-configuration"
+    ],
     "devDependencies": {
         "@swc-node/register": "^1.5.4",
         "@swc/core": "^1.3.14",

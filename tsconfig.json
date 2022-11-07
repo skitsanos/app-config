@@ -11,7 +11,7 @@
         "esModuleInterop": true,
         "moduleResolution": "node",
         "target": "esnext",
-        "module": "esnext",
+        "module": "commonjs",
         "sourceMap": true,
         "strict": true,
         "types": [
