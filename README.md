@@ -40,4 +40,4 @@ config.save('json');
 - `toJson()` - returns JSON formatted string,
 - `toYaml()` - returns YAML formatted string,
 - `getEnv()` - checks `NODE_ENV` for the environment and returns `development` if the environment was not set
-- `get()` - returns the current configuration object.
+- `query()` - query configuration by path.
