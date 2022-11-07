@@ -1,40 +1,15 @@
 {
     "compilerOptions": {
         "baseUrl": ".",
-        "paths": {
-            "@/*": [
-                "src/*"
-            ]
-        },
-        "outDir": "dist",
-        "declaration": true,
-        "esModuleInterop": true,
-        "lib": ["ESNext"],
-        "module": "CommonJS",
-        "moduleResolution": "Node",
-        "sourceMap": true,
+        "module": "esnext",
+        "target": "es2019",
+        "lib": ["esnext"],
         "strict": true,
-        "types": [
-            "node"
-        ],
-        "experimentalDecorators": true,
-        "noImplicitAny": true,
-        "allowSyntheticDefaultImports": true,
-        "allowUnreachableCode": false,
-        "allowUnusedLabels": false,
-        "noUnusedLocals": true,
-        "noUnusedParameters": true,
-        "noUncheckedIndexedAccess": true,
-        "noPropertyAccessFromIndexSignature": true,
-        "strictBindCallApply": true,
-        "removeComments": true
+        "moduleResolution": "node",
+        "isolatedModules": true,
+        "esModuleInterop": true,
+        "declaration": true,
+        "declarationDir": "./dist/types/"
     },
-    "include": [
-        "src/*.ts",
-        "src/**/*.ts"
-    ],
-    "exclude": [
-        "dist",
-        "node_modules"
-    ]
+    "include": ["src/**/*", "test/**/*"]
 }

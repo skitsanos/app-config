@@ -1,8 +1,16 @@
 import {join as pathJoin} from 'path';
 import {existsSync, readdirSync, readFileSync, statSync, writeFileSync} from 'fs';
 import {parse as parseYaml, stringify as stringifyYaml} from 'yaml';
-import {merge} from 'merge-anything';
+import('merge-anything');
 import jsonata from 'jsonata';
+import {merge} from 'merge-anything';
+
+interface IPathDetails
+{
+    fileName: string,
+    path: string,
+    weight: number
+}
 
 class ApplicationConfiguration
 {
@@ -62,7 +70,7 @@ class ApplicationConfiguration
             });
 
         //order of loading
-        files.sort(({weight: sourceWeight}, {weight: tarfgetWeight}) => sourceWeight - tarfgetWeight);
+        files.sort(({weight: sourceWeight}: IPathDetails, {weight: tarfgetWeight}: IPathDetails) => sourceWeight - tarfgetWeight);
 
         for (const configFile of files)
         {
