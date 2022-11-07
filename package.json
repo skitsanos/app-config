@@ -1,6 +1,6 @@
 {
     "name": "@skitsanos/app-config",
-    "version": "1.0.10",
+    "version": "1.0.11",
     "author": {
         "name": "skitsanos",
         "url": "https://github.com/skitsanos"
@@ -13,8 +13,7 @@
         "dist/index.js",
         "dist/index.js.map"
     ],
-    "main": "dist/index.js",
-    "types": "dist/index.d.ts",
+    "main": "src/index.ts",
     "license": "MIT",
     "scripts": {
         "dev:read-config": "ts-node ./examples/read-config.ts",
