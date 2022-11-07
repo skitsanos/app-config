@@ -1,0 +1,38 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "@/*": [
+                "src/*"
+            ]
+        },
+        "esModuleInterop": true,
+        "moduleResolution": "node",
+        "target": "esnext",
+        "module": "esnext",
+        "sourceMap": true,
+        "strict": true,
+        "types": [
+            "node"
+        ],
+        "experimentalDecorators": true,
+        "noImplicitAny": true,
+        "allowSyntheticDefaultImports": true,
+        "allowUnreachableCode": false,
+        "allowUnusedLabels": false,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noUncheckedIndexedAccess": true,
+        "noPropertyAccessFromIndexSignature": true,
+        "strictBindCallApply": true,
+        "removeComments": true
+    },
+    "include": [
+        "src/*.ts",
+        "src/**/*.ts"
+    ],
+    "exclude": [
+        "dist",
+        "node_modules"
+    ]
+}
