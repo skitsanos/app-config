@@ -1,7 +1,15 @@
 {
     "name": "app-config",
     "version": "1.0.0",
-    "main": "index.js",
+    "author":{
+        "name": "skitsanos",
+        "url": "https://github.com/skitsanos"
+    },
+    "repository": "github:skitsanos/app-config",
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com"
+    },
+    "main": "src/index.ts",
     "license": "MIT",
     "scripts": {
         "dev": "node -r @swc-node/register src/demo.ts"
