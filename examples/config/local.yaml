@@ -1,0 +1,3 @@
+server:
+  cors:
+    allow: "*"

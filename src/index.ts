@@ -1,21 +1,18 @@
 import {join as pathJoin} from 'path';
 import {existsSync, readdirSync, readFileSync, statSync, writeFileSync} from 'fs';
 import {parse as parseYaml, stringify as stringifyYaml} from 'yaml';
+import {merge} from 'merge-anything';
+import jsonata from 'jsonata';
 
 class ApplicationConfiguration
 {
-    private config: Record<string, any>;
+    config: Record<string, any>;
     private configStore: string;
 
     constructor()
     {
         this.config = {};
         this.configStore = '';
-    }
-
-    get()
-    {
-        return this.config;
     }
 
     getEnv()
@@ -103,10 +100,7 @@ class ApplicationConfiguration
 
     update<T>(data: Partial<T>)
     {
-        this.config = {
-            ...this.config,
-            ...data
-        };
+        this.config = merge(this.config, data);
     }
 
     /**
@@ -127,7 +121,8 @@ class ApplicationConfiguration
 
     save(format?: string)
     {
-        if(!format){
+        if (!format)
+        {
             const configPath = pathJoin(this.configStore, `${this.getEnv()}.yaml`);
             writeFileSync(configPath, this.toYaml(), 'utf8');
             return;
@@ -144,6 +139,11 @@ class ApplicationConfiguration
             const configPath = pathJoin(this.configStore, `${this.getEnv()}.json`);
             writeFileSync(configPath, this.toJson(), 'utf8');
         }
+    }
+
+    query(path: string)
+    {
+        return jsonata(path).evaluate(this.config);
     }
 }
 
