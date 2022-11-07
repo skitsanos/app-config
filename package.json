@@ -1,18 +1,24 @@
 {
     "name": "@skitsanos/app-config",
-    "version": "1.0.3",
+    "version": "1.0.8",
     "author": {
         "name": "skitsanos",
         "url": "https://github.com/skitsanos"
     },
     "repository": "github:skitsanos/app-config",
     "files": [
-        "src/index.ts"
+        "src/index.ts",
+        "package.json",
+        "dist/index.d.ts",
+        "dist/index.js",
+        "dist/index.js.map"
     ],
-    "main": "src/index.ts",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
     "license": "MIT",
     "scripts": {
         "dev": "node -r @swc-node/register src/demo.ts",
+        "build": "tsc",
         "publish": "npm publish --access=public"
     },
     "devDependencies": {

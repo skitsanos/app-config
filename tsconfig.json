@@ -6,6 +6,8 @@
                 "src/*"
             ]
         },
+        "outDir": "dist",
+        "declaration": true,
         "esModuleInterop": true,
         "moduleResolution": "node",
         "target": "esnext",
