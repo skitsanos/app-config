@@ -41,7 +41,7 @@
         "typescript": "^5.0.0"
     },
     "dependencies": {
-        "@types/node": "^22.0.0",
+        "@types/node": "^24.0.0",
         "jsonata": "^2.0.0",
         "merge-anything": "^6.0.0",
         "yaml": "^2.1.3"
